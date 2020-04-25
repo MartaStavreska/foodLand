@@ -1,0 +1,20 @@
+
+  #main {
+    position: relative;
+    color: white;
+  }
+  
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+  }
+ a{
+     text-decoration: none;
+     color: white;
+ }
+ a:hover{
+     color: grey;
+ }
+  
