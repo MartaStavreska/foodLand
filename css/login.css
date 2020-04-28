@@ -10,8 +10,8 @@
     left: 60%;
     transform: translate(-50%, -50%);
   }
- a{
-     text-decoration: none;
+ a {
+     text-decoration: none !important;
      color: white;
  }
  a:hover{
