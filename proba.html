@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container d-flex">
+
+        <div class="col-md-7 offset-1  mt-3 border border-dark">
+            <h3 class="pt-3 offset-3">${data.recepie}</h3>
+            <p id="name" class="pt-3">${data.name}</p>
+            <div class="d-flex  text-justify">
+                <div class="col-md-3   mt-4">
+                    <h5>Ingredients</h5>
+                    <p>${data.ingredients}</p>   
+                </div>
+                <div class="col-md-5 offset-2 mt-4">
+                    <h5>Preparation</h5>
+                    <p>${data.preparation}</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-md-5 mt-2 text-center">
+            <img src="${data.image}" class="w-100" alt="">
+
+        </div>
+
+
+    </div>
+</body>
+
+</html>

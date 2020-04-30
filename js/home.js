@@ -45,10 +45,12 @@ function allRecepies() {
         }).then(function (data) {
             recepies = Object.keys(data).map(function (element) {
                 var newElement = {
-                    id: element,
-                    name: data[element].name,
-                    recepie: data[element].recepie,
-                    image: data[element].image
+                  id: element,
+                  name: data[element].name,
+                  recepie: data[element].recepie,
+                  ingredients: data[element].ingredients,
+                  preparation: data[element].preparation,
+                  image: data[element].image
                 };
                 return newElement;
 
@@ -73,7 +75,7 @@ function drawRecepies(array) {
             <br>
             Recepie by: ${element.name}
           </p>
-          <a href="#" class="btn btn-dark">Show More</a>
+          <a href="recepie.html?id=${element.id}" class="btn btn-dark">Show More</a>
         </div>
       </div>
         `

@@ -34,7 +34,7 @@ function login(e) {
         localStorage.setItem("token", data.idToken);
        
         console.log(data);
-        location.replace("recepies.html");
+        location.replace("recepiesForm.html");
         
     }).catch(function (error) {
         if (error == "TypeError: Failed to fetch") {

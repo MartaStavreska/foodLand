@@ -1,3 +1,8 @@
+var token = localStorage.getItem("token");
+if(token == ""){
+    location.assign("login.html")
+}
+
 function showSelectedImage(imageUrl, error) {
     //Ako slucajno se pojavi nekoj error mojata funkcija ke go stavi tekstot vo error parametarot
     //inaku ke bide null. Namesto alert moze da go ispisete errorot na drugo mesto
