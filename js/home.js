@@ -53,15 +53,16 @@ function allRecepies() {
                 return newElement;
 
             });
-            drawAllRecepies(recepies);
+            drawRecepies(recepies);
         }).catch(function (error) {
             console.log(error)
         });
 }
 
 
-function drawAllRecepies(array) { 
+function drawRecepies(array) { 
     array.forEach(function (element) {
+   
         var rec = `
          <div class="card p-2  m-2" style="width: 15rem;">
         <img class="card-img-top" style="height:250px" src="${element.image}"

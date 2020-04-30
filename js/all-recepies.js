@@ -10,6 +10,7 @@ function allRecepies() {
         .then(function (res) {
             return res.json();
         }).then(function (data) {
+            
             recepies = Object.keys(data).map(function (element) {
                 var newElement = {
                     id: element,
@@ -31,6 +32,7 @@ function allRecepies() {
 
 function drawAllRecepies(array) { 
     array.forEach(function (element) {
+        
         var rec = `
         <div class="card mb-5">
         <div class="row no-gutters">
