@@ -70,9 +70,8 @@ function drawRecepies(array) {
         <img class="card-img-top" style="height:250px" src="${element.image}"
           alt="Card image cap">
         <div class="card-body">
-          <h5 class="card-title">${element.recepie}</h5>
-          <p class="card-text">
-            <br>
+          <h5 class="card-title">${element.recepie}</h5> <br>
+          <p id="recepie-by"class="card-text">
             Recepie by: ${element.name}
           </p>
           <a href="recepie.html?id=${element.id}" class="btn btn-dark">Show More</a>
