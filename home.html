@@ -13,7 +13,7 @@
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/home.css">
-  <title>Foodland</title>
+  <title>FoodLand</title>
 </head>
 
 <body>
@@ -54,42 +54,44 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="navbar-brand" href="#">
+        <li class="nav-item">
+          <a class="navbar-link" href="home.html">
             <img
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSkCw6W0YMvcNzS0JSt9TnhksR2EXWf9WGF4Rex57a6ffhREfaT&usqp=CAU"
               width="30" height="30" class="d-inline-block align-top" alt="">
-
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">About<span class="sr-only"></span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Recepies<span class="sr-only"></span></a>
+          <a class="nav-link" onclick="AddRecepie()">Add Recepie<span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Events<span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="all-recepies.html">Recepies<span class="sr-only"></span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="chefs.html">Our Chefs<span class="sr-only"></span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link">Events<span class="sr-only"></span></a>
+          <a class="nav-link" href="#">Contact<span class="sr-only"></span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link">Contact<span class="sr-only"></span></a>
+          <a id="logout" class="nav-link" href="home.html" onclick="LogOut()"><span class="sr-only"></span></a>
         </li>
-
-
-
       </ul>
       <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-light my-2 my-sm-0" type="submit">Search</button>
+        <button class="btn btn-light my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
       </form>
     </div>
   </nav>
 
   <div>
-    <span class="mt-3 ml-4">Something interesting to share?</span>
+    <span class="mt-3 ml-4">Share your skills</span>
     <p class="badge badge-danger mt-3">
       <a href="login.html" class="text-white">Please login</a>
     </p>
@@ -114,7 +116,8 @@
       <div class="col-md-3">
         <img src="https://cdn.pixabay.com/photo/2016/11/06/23/31/breakfast-1804457_960_720.jpg" class="w-100" alt="">
         <h2><a href="">Clean Tasty Breakfeast</a></h2>
-        <p>Start your day off right with a healthy breakfast, loaded with the right balance of carbs, protein and fat. </p>
+        <p>Start your day off right with a healthy breakfast, loaded with the right balance of carbs, protein and fat.
+        </p>
       </div>
     </div>
   </div>
@@ -148,64 +151,14 @@
   </div>
 
   <!-- Ovde gi crtas vnesnite recepti vo card  -->
-  <div class="d-flex">
-    <div class="card p-2  m-2" style="width: 18rem;">
-      <img class="card-img-top" src="https://cdn.pixabay.com/photo/2016/03/05/19/58/appetite-1238569_960_720.jpg"
-        alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">From sea to your home</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-          content.
-          <br>
-          Recepie by:
-        </p>
-        <a href="#" class="btn btn-primary">Show More</a>
-      </div>
-    </div>
-    <div class="card p-2  m-2" style="width: 18rem;">
-      <img class="card-img-top" src="https://cdn.pixabay.com/photo/2016/03/05/19/58/appetite-1238569_960_720.jpg"
-        alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">From sea to your home</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-          content.
-          <br>
-          Recepie by:
-        </p>
-        <a href="#" class="btn btn-primary">Show More</a>
-      </div>
-    </div>
-    <div class="card p-2  m-2" style="width: 18rem;">
-      <img class="card-img-top" src="https://cdn.pixabay.com/photo/2014/04/22/02/55/pasta-329522_960_720.jpg"
-        alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Itallian pasta</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-          content.
-          <br>
-          Recepie by:
-        </p>
-        <a href="#" class="btn btn-primary">Show More</a>
-      </div>
-    </div>
-    <div class="card p-2 m-2" style="width: 18rem;">
-      <img class="card-img-top" src="https://cdn.pixabay.com/photo/2019/02/26/16/45/burger-4022487_960_720.jpg"
-        alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Summer Snacks</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-          content.
-          <br>
-          Recepie by:
-        </p>
-        <a href="#" class="btn btn-primary">Show More</a>
-      </div>
-    </div>
+  <div id="card" class="d-flex">
+   
+    
   </div>
 
   <br> <br> <br> <br>
   <hr>
-  <div class="d-flex">
+  <div class="d-flex ml-4">
     <div class="col-md-6 text-justify">
       <h2>Buy Local</h2>
       <h5> Why is buying local so important?</h5>
@@ -214,12 +167,11 @@
         own backyard, locally grown food can take many forms.
         When buying locally, you may choose to buy food that was grown as locally as possible. Locally grown food can
         often be found in your regular grocery store, at farmers’ markets or within community-supported agriculture
-        programs.</p>
-      <p>
-        <button type="button" class="btn btn-light">Learn More</button>
-        <br>
-        <!-- on click Napraj show more
-          Flavour, freshness and genetic diversity <br>
+        programs.<span id="dots">...</span>
+      </p>
+
+      <p id="more">
+        Flavour, freshness and genetic diversity <br>
 
         Other reasons often given for consumers buying local foods include their freshness, flavour and nutritional
         content. In contrast to produce grown on distant shores, which may have spent weeks travelling across the globe
@@ -237,11 +189,13 @@
 
         As well as offering consumers the opportunity to try produce in new flavours and different colours, growing a
         wider assortment of varieties has another important consequence – it helps preserve genetic diversity, thereby
-        increasing the resilience of the crop to potential future threats. -->
-      </p>
+        increasing the resilience of the crop to potential future threats.
+      </p><br>
+      <button id="btn" type="button" class="btn btn-light m-2" onclick="showMore()">Learn More</button>
     </div>
     <div class="ml-2">
-      <img style="width: 600px;" src="https://cdn.pixabay.com/photo/2014/04/11/13/26/eat-321671_960_720.jpg" alt="">
+      <img style="width: 600px;" src="https://cdn.pixabay.com/photo/2015/12/09/17/11/vegetables-1085063_960_720.jpg"
+        alt="">
     </div>
   </div>
   <hr>
@@ -291,24 +245,24 @@
           <img src="https://cdn.pixabay.com/photo/2016/03/09/09/13/chef-1245676_960_720.jpg" class="d-block w-100"
             alt="...">
           <div class="carousel-caption d-none d-md-block">
-            <h5>First slide label</h5>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <h5>Cooking like profesional chef</h5>
+            <p>Cooking is guilty pleasure and useful time filler.</p>
           </div>
         </div>
         <div class="carousel-item">
           <img src="https://cdn.pixabay.com/photo/2015/12/08/00/58/italian-1082230_960_720.jpg" class="d-block w-100"
             alt="...">
           <div class="carousel-caption d-none d-md-block">
-            <h5>Second slide label</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h5>Cooking like profesional chef</h5>
+            <p>Something that's such a joy in my life every day - cooking - is this incredible..</p>
           </div>
         </div>
         <div class="carousel-item">
           <img src="https://cdn.pixabay.com/photo/2016/11/22/19/33/asian-cuisine-1850233_960_720.jpg"
             class="d-block w-100" alt="...">
           <div class="carousel-caption d-none d-md-block">
-            <h5>Third slide label</h5>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            <h5>Cooking like profesional chef</h5>
+            <p>I cook from the soul.</p>
           </div>
         </div>
       </div>
@@ -394,12 +348,11 @@
 
 
   </footer>
-
-
-
-
-
   </div>
+
+
+  <script src="js/home.js"></script>
+
 </body>
 
 </html>

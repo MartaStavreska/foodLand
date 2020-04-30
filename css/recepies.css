@@ -11,3 +11,7 @@ hr{
 #badge{
     opacity: 0.8;
 }
+.error {
+    color: red;
+    font-size: large;
+  }

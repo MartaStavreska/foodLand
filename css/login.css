@@ -17,4 +17,9 @@
  a:hover{
      color: grey;
  }
+ .error {
+  color: red;
+  font-size: large;
+}
+
   
