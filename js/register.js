@@ -36,11 +36,7 @@ function register(e) {
         location.assign("login.html");
         
     }).catch(function (error) {
-        if (error == "TypeError: Failed to fetch") {
-            errorP.innerText = "No internet connection";
-        } else {
-            errorP.innerText = "Some critical error!";
-        }
+        console.log(error)
     });
 
 

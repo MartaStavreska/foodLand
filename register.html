@@ -1,76 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/login.css">
+    <title>Register</title>
 </head>
 
 <body>
+    <div id="main">
+        <img class="offset-2" src="https://cdn.pixabay.com/photo/2016/11/29/08/24/bakery-1868396_960_720.jpg"
+            class="w-100" alt="">
 
-    <!DOCTYPE html>
-    <html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap"
-            rel="stylesheet">
-        <link rel="stylesheet" href="css/login.css">
-        <title>Document</title>
-    </head>
-
-    <body>
-        <div id="main">
-        <img class="offset-2" src="https://cdn.pixabay.com/photo/2016/11/29/08/24/bakery-1868396_960_720.jpg" class="w-100" alt="">
-    
-            <div class="col-md-7 centered transbox"> 
-                <div class="d-flex justify-content-between col-md-10">
-                    <h2>Register</h2>
-                    <a  class="mr-6" href="home.html">Go Back</a>
-                </div>
-                
-                <form class="col-md-10" onsubmit="register(event)" novalidate>
-                    <div class="form-group mt-4">
-                        <label for="name"> <strong>Username</strong></label>
-                        <input type="text" name="name" class="form-control" id="name" aria-describedby="nameHelp"
-                            placeholder="Enter your Name">
-                    </div>
-                    <div class="form-group">
-                        <label for="email"> <strong>Email address</strong> </label>
-                        <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp"
-                            placeholder="Enter email">
-                            
-                    </div>
-
-                    <div class="form-group">
-                        <label for="password"> <strong>Password</strong> </label>
-                        <input type="password" class="form-control" name="password" id="password" placeholder="Password">
-                        
-                    </div>
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                       
-                    </div>
-                    <p class="error"></p>
-                    <button type="submit" class="btn btn-secondary">Submit</button> <br>
-                  
-                   
-                    <br><br><br>
-                </form>
+        <div class="col-md-7 centered transbox">
+            <div class="d-flex justify-content-between col-md-10">
+                <h2>Register</h2>
+                <a class="mr-6" href="home.html">Go Back</a>
             </div>
-        
-    </div>
-    <script src="js/validation.js" ></script>
-    <script src="js/register.js"></script>
-    </body>
 
-    </html>
+            <form class="col-md-10" onsubmit="register(event)" novalidate>
+                <div class="form-group mt-4">
+                    <label for="name"> <strong>Username</strong></label>
+                    <input type="text" name="name" class="form-control" id="name" aria-describedby="nameHelp"
+                        placeholder="Enter your Name">
+                </div>
+                <div class="form-group">
+                    <label for="email"> <strong>Email address</strong> </label>
+                    <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp"
+                        placeholder="Enter email">
+
+                </div>
+
+                <div class="form-group">
+                    <label for="password"> <strong>Password</strong> </label>
+                    <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+
+                </div>
+                <p class="error"></p>
+                <button type="submit" class="btn btn-secondary">Submit</button> <br>
+
+
+                <br><br><br>
+            </form>
+        </div>
+
+    </div>
+    <script src="js/validation.js"></script>
+    <script src="js/register.js"></script>
+</body>
+
+</html>

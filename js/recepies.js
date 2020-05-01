@@ -53,20 +53,13 @@ function postRecepie(e) {
             return;
         }
        
-        form.name.value = "";
-        form.recepie.value = "";
-        form.ingredients.value = "";
-        form.preparation.value = "";
+        form.reset();
         document.getElementById("selected-image").src = "";
       //  location.assign("all-recepies.html")
 
 
     }).catch(function (error) {
-        if (error == "TypeError: Failed to fetch") {
-            paragraph.innerText = "No internet connection";
-        } else {
-            paragraph.innerText = "Some critical error!";
-        }
+       console.log(error);
     });
 
 

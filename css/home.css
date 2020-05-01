@@ -37,12 +37,12 @@ a:hover{
      height: 250px;
      width:250px;
 }
-li{
-    list-style: none;
-}
 #more{
     display: none;
 }
 #recepie-by{
     font-family: 'Bad Script', cursive;
+}
+ul{
+    list-style-type: none;
 }

@@ -37,11 +37,7 @@ function login(e) {
         location.replace("recepiesForm.html");
         
     }).catch(function (error) {
-        if (error == "TypeError: Failed to fetch") {
-            errorP.innerText = "No internet connection";
-        } else {
-            errorP.innerText = "Some critical error!";
-        }
+       console.log(error);
     });
 
 

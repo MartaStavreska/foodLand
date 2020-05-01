@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+    <title>Events</title>
+    <link rel="stylesheet" href="css/chefsandcontact.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="navbar-link" href="home.html">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSkCw6W0YMvcNzS0JSt9TnhksR2EXWf9WGF4Rex57a6ffhREfaT&usqp=CAU"
+                            width="30" height="30" class="d-inline-block align-top" alt="">
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="AddRecepie()">Add Recepie<span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="events.html">Events<span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="all-recepies.html">Recepies<span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="chefs.html">Our Chefs<span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact<span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a id="logout" class="nav-link" href="home.html" onclick="LogOut()"><span
+                            class="sr-only"></span></a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <div class="card text-center">
+        <div class="card-header">
+        </div>
+        <div class="card-body">
+            <h2 id="contact" class="card-title">Events</h2>
+        </div>
+    </div>
+
+    <div class="container mt-3">
+
+        <div class="card-columns">
+            <div class="card">
+                <img class="card-img-top"
+                    src="https://cdn.pixabay.com/photo/2016/11/09/21/28/exclusive-banquet-1812772_960_720.jpg"
+                    alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Cayman Islands: Cayman Cookout, January 14–17, 2016</h5>
+                    <p class="card-text"> Colicchio, Anthony Bourdain and many more for incredible meals, educational
+                        demos, and wine and mixologist tastings—all in a gorgeous Caribbean setting.</p>
+                </div>
+            </div>
+            <div class="card p-3">
+                <blockquote class="blockquote mb-0 card-body">
+                    <p>Montreal, Quebec: Montréal en Lumière, February 18–March 5, 2016</p>
+                    <footer class="blockquote-footer">
+                        <small class="text-muted">
+                            This year's roundup features a Quebec Chefs and Cheeses evening, which will let 400 guests
+                            and a jury of 12 experts try the creations of four up-and-coming chefs to see who will win a
+                            $5,000 prize, in addition to a fine-dining program that is not to be missed.
+
+                            <cite title="Source Title">Mike J</cite>
+                        </small>
+                    </footer>
+                </blockquote>
+            </div>
+            <div class="card">
+                <img class="card-img-top"
+                    src="https://cdn.pixabay.com/photo/2016/03/26/22/53/alcohol-1281704_960_720.jpg"
+                    alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Miami, Florida: South Beach Wine & Food Festival, February 24–28, 2016</h5>
+                    <p class="card-text">If you've always dreamed of drinking tiki cocktails with Guy Fieri or having a
+                        rosé brunch with Martha Stewart, the South Beach Wine & Food Festival can make your wishes come
+                        true.
+                    </p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+        
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">MAY</h5>
+                    <p class="card-text">Austin, Texas: Austin Food and Wine Festival, April 22–24, 2016
+                    </p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top"
+                    src="https://cdn.pixabay.com/photo/2015/06/08/15/02/breakfast-801827_960_720.jpg"
+                    alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Saugerties, New York: Hudson Valley Garlic Festival, October 1–2, 2016</h5>
+                    <p class="card-text">The Hudson Valley has a reputation for having exquisite produce; what better
+                        way to immerse yourself in it than to attend the area's famed garlic festival? It's a taste of
+                        upstate's bounty, featuring local agriculture experts, food vendors and farmers.
+                    </p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+            <div class="card bg-secondary text-white text-center p-3">
+                <blockquote class="blockquote mb-0">
+
+                    <p>Copenhagen: MAD5, Dates TBA</p>
+                    <p>Buñol, Spain: La Tomatina, August 31, 2016</p>
+                    <footer class="blockquote-footer">
+                        <small>
+                            Someone famous in <cite title="Source Title">Tokio</cite>
+                        </small>
+                    </footer>
+                </blockquote>
+            </div>
+            <div class="card">
+                <img class="card-img" src="https://cdn.pixabay.com/photo/2015/01/16/15/02/eating-601578_960_720.jpg"
+                    alt="Card image">
+            </div>
+            <div class="card p-3 text-right">
+                <blockquote class="blockquote mb-0">
+                    <p>Singapore: Singapore Food Festival, Monthlong</p>
+                    <footer class="blockquote-footer">
+                        <small class="text-muted">
+                            Singapore’s top chefs <cite title="Source Title">Dates TBA</cite>
+                        </small>
+                    </footer>
+                </blockquote>
+            </div>
+            <div class="card">
+                <img class="card-img-top"
+                    src="https://cdn.pixabay.com/photo/2017/03/02/05/14/hands-holding-plate-2110438_960_720.jpg"
+                    alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Toronto, Canada: Toronto Food & Wine, September 18–20, 2016</h5>
+                    <p class="card-text">If you've been meaning to visit this up-and-coming culinary city (now home to a
+                        new David Chang Momofuku outpost), make sure to get there for next year's festival.The event is
+                        jam-packed with presentations by celebrity chefs—the 2015 festival featured a brunch with Daniel
+                        Boulud and famed Chicago chef Jason Vincent.
+                    </p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Buñol, Spain: La Tomatina, August 31, 2016</h5>
+                    <p class="card-text">If you like to get messy, you need to get to Buñol, outside Valencia, for the
+                        last Wednesday of August. That's when their annual tomato-throwing festival—the world's biggest
+                        food fight—takes place. Revelers throw over-ripe tomatoes at each other until water cannons
+                        break it up.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <br><br><br><br><br>
+    <footer>
+        <div class="row d-flex">
+            <div class="col-md-4">
+                <ul class="text-success">
+                    <h4 class="text-success"> Recipes</h4>
+                    <li> By ingredient</li>
+                    <li> Featured on TV</li>
+                    <li> Calendar</li>
+                    <li> Quick recipes</li>
+                    <li> Food facts</li>
+                    <li> Buy local</li>
+                </ul>
+            </div>
+
+            <div class="col-md-4">
+                <ul class="text-success">
+                    <h4 class="text-success"> Recipes</h4>
+                    <li> By ingredient</li>
+                    <li> Featured on TV</li>
+                    <li> Calendar</li>
+                    <li> Quick recipes</li>
+                    <li> Food facts</li>
+                    <li> Buy local</li>
+                </ul>
+            </div>
+
+            <div class="col-md-4">
+                <ul class="text-success">
+                    <h4 class="text-success"> Recipes</h4>
+                    <li> By ingredient</li>
+                    <li> Featured on TV</li>
+                    <li> Calendar</li>
+                    <li> Quick recipes</li>
+                    <li> Food facts</li>
+                    <li> Buy local</li>
+                </ul>
+            </div>
+
+
+        </div>
+    </footer>
+
+    <script src="js/home.js"></script>
+
+
+</body>
+
+</html>
+</div>
+</body>
+
+</html>
