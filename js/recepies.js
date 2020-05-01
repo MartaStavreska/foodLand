@@ -7,7 +7,7 @@ function showSelectedImage(imageUrl, error) {
     //Ako slucajno se pojavi nekoj error mojata funkcija ke go stavi tekstot vo error parametarot
     //inaku ke bide null. Namesto alert moze da go ispisete errorot na drugo mesto
     if (error !== null) {
-      alert(error);
+        document.querySelector(".error").innerText = error;
     }
   
     document.getElementById("selected-image").src = imageUrl;
@@ -58,7 +58,7 @@ function postRecepie(e) {
         form.ingredients.value = "";
         form.preparation.value = "";
         document.getElementById("selected-image").src = "";
-      //  location.assign("recepies-details.html")
+      //  location.assign("all-recepies.html")
 
 
     }).catch(function (error) {
