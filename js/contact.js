@@ -32,4 +32,39 @@ function sendMessage(e) {
 }
 
 
+allMessages();
+var messages;
+ function allMessages(){
 
+    fetch("https://food-blog-8ca4b.firebaseio.com/messages.json")
+    .then(function(res){
+        return res.json();
+    }).then(function(data){
+        
+   messages = Object.keys(data).map(function(key){
+       return  {
+        id:key,
+        name:data[key].name,
+        email:data[key].email,
+        message:data[key].message
+    }
+    })
+    drawMessages(messages);
+
+    }).catch(function(error){
+        console.log(error);
+    })
+ }
+
+ function drawMessages(arrayOfMessages){
+   arrayOfMessages.forEach(function(element){
+      var card = 
+      `<div class="card mt-3">
+      <div class="card-body">${element.name}
+        <p class="card-text">${element.message}</p>
+      </div>
+    </div>`  
+    document.querySelector(".messages").innerHTML += card;   
+   });
+   
+ }
