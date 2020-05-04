@@ -1,36 +1,56 @@
-
 var recepies;
 allRecepies();
 
-function allRecepies(shouldDraw) {
+function allRecepies() {
 
-    var url = "https://food-blog-8ca4b.firebaseio.com/recepies.json";
+  var url = "https://food-blog-8ca4b.firebaseio.com/recepies.json";
 
-    fetch(url)
-        .then(function (res) {
-            return res.json();
-        }).then(function (data) {
-            recepies = Object.keys(data).map(function (element) {
-                var newElement = {
-                    id: element,
-                    name: data[element].name,
-                    recepie: data[element].recepie,
-                    ingredients: data[element].ingredients,
-                    preparation: data[element].preparation,
-                    image: data[element].image
-                };
-                return newElement;
+  fetch(url)
+    .then(function (res) {
+      return res.json();
+    }).then(function (data) {
+      recepies = Object.keys(data).map(function (element) {
+        var newElement = {
+          id: element,
+          name: data[element].name,
+          recepie: data[element].recepie,
+          ingredients: data[element].ingredients,
+          preparation: data[element].preparation,
+          image: data[element].image
+        };
+        return newElement;
 
-            });
+      });
+      drawRecepies(recepies);
+      drawAllRecepies(recepies);
+      searchRecepie(recepies);
+    }).catch(function (error) {
+      console.log(error)
+    });
+}
 
-            if(shouldDraw){
-                drawAllRecepies(recepies);
-            }
-            searchRecepie(recepies);
 
-        }).catch(function (error) {
-            console.log(error)
-        });
+function drawRecepies(array) {
+
+  document.querySelector("#home-card").innerHTML = "";
+  array.forEach(function (element) {
+    var rec = `
+       <div class="card p-3 m-2" style="width: 14rem;">
+      <img class="card-img-top" style="height:250px" src="${element.image}"
+        alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title" style="height:70px">${element.recepie}</h5> <br>
+        <p id="recepie-by"class="card-text">
+          Recepie by: ${element.name}
+        </p>
+        <a href="recepie.html?id=${element.id}" class="btn btn-dark">Show More</a>
+      </div>
+    </div>
+   
+      `
+    document.querySelector("#home-card").innerHTML += rec;
+  });
+
 }
 
 
@@ -54,7 +74,7 @@ function searchRecepie() {
 
 
 function drawAllRecepies(array) {
-    document.querySelector(".container").innerHTML = "";
+    document.querySelector("#all-recepies").innerHTML = "";
 
     array.forEach(function (element) {
         var rec = `
@@ -87,9 +107,8 @@ function drawAllRecepies(array) {
     </div>`
 
 
-        document.querySelector(".container").innerHTML += rec;
+        document.querySelector("#all-recepies").innerHTML += rec;
     });
 }
-
 
 
