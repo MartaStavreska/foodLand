@@ -34,6 +34,7 @@ function sendMessage(e) {
 
 var h1 = document.querySelector("#forbiden");
 if (localStorage.getItem("email") == "marta@gmail.com") {
+    ///pass marta1234
     var token = localStorage.getItem("token");
     document.body.removeChild(h1);
 } else {
