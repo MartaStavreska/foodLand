@@ -1,17 +1,27 @@
 function AddRecepie() {
     if (localStorage.getItem("email")) {
-        location.assign("recepiesForm.html");
+        location.assign("recepiesForm");
     } else {
         location.assign("login.html")
     }
 }
 
 
-var logoutA = document.querySelector("#logout");
+var logoutAnchor = document.querySelector("#logout");
+
 if (localStorage.getItem("email")) {
-    logoutA.innerHTML = "Log Out"
+    logoutAnchor.innerHTML = "Log Out"
 }
-logoutA.onclick = function () {
+logoutAnchor.onclick = function () {
     localStorage.clear();
 }
+
+
+var adminAnchor = document.querySelector("#admin");
+if(localStorage.getItem("email") == "marta@gmail.com"){
+    adminAnchor.innerHTML = "Messages"
+}
+
+
+
 

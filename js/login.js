@@ -34,7 +34,7 @@ function login(e) {
         localStorage.setItem("token", data.idToken);
        
         console.log(data);
-        location.replace("recepiesForm.html");
+        location.replace("home.html");
         
     }).catch(function (error) {
        console.log(error);

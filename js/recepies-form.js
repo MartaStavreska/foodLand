@@ -1,16 +1,16 @@
-var token = localStorage.getItem("token");
-if(token == ""){
-    location.assign("login.html")
-}
+
+var paragraph = document.querySelector(".error");
+
+
 
 function showSelectedImage(imageUrl, error) {
 
     if (error !== null) {
-        document.querySelector(".error").innerText = error;
+        paragraph.innerText = error;
     }
-  
+
     document.getElementById("selected-image").src = imageUrl;
-  }
+}
 
 
 function postRecepie(e) {
@@ -23,22 +23,27 @@ function postRecepie(e) {
     const image = document.getElementById("selected-image").src;
 
 
-    var paragraph = document.querySelector(".error").innerText;
+    var token = localStorage.getItem("token");
+    
+    if (token == null) {
+        paragraph.innerText = "Please Login"   
+        return;
+    }
 
     if (name == "" || recepie == "" || ingredients == "" || preparation == "" || image == "") {
-        document.querySelector(".error").innerText = "You need to fill all fields";
+        paragraph.innerText = "You need to fill all fields";
         return;
     }
 
 
-    var url = "https://food-blog-8ca4b.firebaseio.com/recepies.json";
+    var url = "https://food-blog-8ca4b.firebaseio.com/recepies.json?auth=" + token;
 
 
     fetch(url, {
         method: "POST",
         body: JSON.stringify({
             name: name,
-            recepie:recepie,
+            recepie: recepie,
             ingredients: ingredients,
             preparation: preparation,
             image: image
@@ -51,14 +56,14 @@ function postRecepie(e) {
             paragraph.innerText = errorMessage;
             return;
         }
-       
+
         form.reset();
         document.getElementById("selected-image").src = "";
-      //  location.assign("all-recepies.html")
+        location.assign("all-recepies.html")
 
 
     }).catch(function (error) {
-       console.log(error);
+        console.log(error);
     });
 
 
