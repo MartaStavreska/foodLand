@@ -3,13 +3,19 @@ function setHeaderAndFooter() {
     document.querySelector("header").innerHTML += `
     <nav class="navbar navbar-expand-md navbar-light bg-light">
     <a href="home.html" class="navbar-brand"><img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSkCw6W0YMvcNzS0JSt9TnhksR2EXWf9WGF4Rex57a6ffhREfaT&usqp=CAU"
+        src="images/400-4002708_chef-hat-clip-art-chef-hat-svg-free.jpg"
         width="30" height="30" class="d-inline-block align-top" alt=""></a>
     <button type="button" class="navbar-toggler bg-light" data-toggle="collapse" data-target="#nav">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-between" id="nav">
-      <ul class="navbar-nav">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link  px-3" href="home.html">Home<span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link  px-3" href="events.html">Events<span class="sr-only"></span></a>
+        </li>
         <li class="nav-item">
           <a class="nav-link  px-3" onclick="AddRecepie()">Add Recepie<span class="sr-only"></span></a>
         </li>
@@ -23,15 +29,7 @@ function setHeaderAndFooter() {
           <a class="nav-link  px-3" href="events.html">Events<span class="sr-only"></span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link  px-3" href="contact.html">Contact<span class="sr-only"></span></a>
-        </li>
-        <li class="nav-item">
-          <a id="admin" class="nav-link  px-3" href="messages.html" onclick="getMessages()"><span
-              class="sr-only"></span></a>
-        </li>
-        <li class="nav-item">
-          <a id="logout" class="nav-link  px-3" href="home.html" onclick="LogOut()"><span
-              class="sr-only"></span></a>
+          <a id="logout" class="nav-link  px-3" href="home.html" onclick="LogOut()"><span class="sr-only"></span></a>
         </li>
       </ul>
     </div>
