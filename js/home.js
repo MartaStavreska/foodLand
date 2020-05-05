@@ -38,7 +38,7 @@ function drawRecepies(array) {
       <img class="card-img-top" style="height:250px" src="${element.image}"
         alt="Card image cap">
       <div class="card-body">
-        <h5 class="card-title" style="height:70px">${element.recepie}</h5> <br>
+        <h5 class="card-title" style="height:90px">${element.recepie}</h5> <br>
         <p id="recepie-by"class="card-text">
           Recepie by: ${element.name}
         </p>

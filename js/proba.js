@@ -19,10 +19,9 @@ function allRecepies() {
           image: data[element].image
         };
         return newElement;
-
       });
-      drawRecepies(recepies);
       drawAllRecepies(recepies);
+      drawRecepies(recepies);  
       searchRecepie(recepies);
     }).catch(function (error) {
       console.log(error)
@@ -31,7 +30,7 @@ function allRecepies() {
 
 
 function drawRecepies(array) {
-
+console.log(array);
   document.querySelector("#home-card").innerHTML = "";
   array.forEach(function (element) {
     var rec = `
@@ -53,7 +52,6 @@ function drawRecepies(array) {
 
 }
 
-
 function searchRecepie() {
    
     var input = document.querySelector("#search").value;
@@ -74,6 +72,7 @@ function searchRecepie() {
 
 
 function drawAllRecepies(array) {
+  console.log(array)
     document.querySelector("#all-recepies").innerHTML = "";
 
     array.forEach(function (element) {

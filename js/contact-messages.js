@@ -32,21 +32,25 @@ function sendMessage(e) {
         });
 }
 
-var h1 = document.querySelector("#forbiden");
-if (localStorage.getItem("email") == "marta@gmail.com") {
-    ///pass marta1234
-    var token = localStorage.getItem("token");
-    document.body.removeChild(h1);
-} else {
-    document.querySelector("#clear-message").innerHTML = "";
-    h1.innerHTML = "Access Forbiden";
-}
+
+
 
 
 allMessages();
 var messages;
+
 function allMessages() {
 
+    var h1 = document.querySelector("#forbiden");
+    if (localStorage.getItem("email") == "marta@gmail.com") {
+        var token = localStorage.getItem("token");
+        document.body.removeChild(h1);
+    } else {
+        document.querySelector("#clear-message").innerHTML = "";
+        h1.innerHTML = "Access Forbiden";
+        return false;
+    }
+    
     fetch("https://food-blog-8ca4b.firebaseio.com/messages.json?auth=" + token)
         .then(function (res) {
             return res.json();
@@ -59,18 +63,20 @@ function allMessages() {
                     email: data[key].email,
                     message: data[key].message
                 }
-            })
+            });
+
             drawMessages(messages);
 
         }).catch(function (error) {
             console.log(error);
         })
+
 }
 
 function drawMessages(arrayOfMessages) {
     arrayOfMessages.forEach(function (element) {
         var card =
-            `<div class="card mt-3">
+    `<div class="card mt-3">
       <div class="card-body"><h5>${element.name}</h5>
        <p>${element.email}</p>
         <p class="card-text">${element.message}</p>

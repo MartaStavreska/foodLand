@@ -1,6 +1,6 @@
 function AddRecepie() {
     if (localStorage.getItem("email")) {
-        location.assign("recepiesForm");
+        location.assign("recepiesForm.html");
     } else {
         location.assign("login.html")
     }
@@ -18,8 +18,11 @@ logoutAnchor.onclick = function () {
 
 
 var adminAnchor = document.querySelector("#admin");
+var li = document.querySelector("#admin-li");
 if(localStorage.getItem("email") == "marta@gmail.com"){
     adminAnchor.innerHTML = "Messages"
+}else{
+    document.querySelector("ul").removeChild(li);
 }
 
 

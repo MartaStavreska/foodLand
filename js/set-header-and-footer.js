@@ -26,7 +26,10 @@ function setHeaderAndFooter() {
           <a class="nav-link  px-3" href="chefs.html">Chefs<span class="sr-only"></span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link  px-3" href="events.html">Events<span class="sr-only"></span></a>
+          <a class="nav-link  px-3" href="contact.html">Contact<span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item" id="admin-li">
+          <a class="nav-link  px-3" href="messages.html" id="admin">Messages<span class="sr-only"></span></a>
         </li>
         <li class="nav-item">
           <a id="logout" class="nav-link  px-3" href="home.html" onclick="LogOut()"><span class="sr-only"></span></a>
