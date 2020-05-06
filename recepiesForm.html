@@ -15,71 +15,72 @@
 </head>
 
 <body>
-   <header></header>
-
+    <header></header>
     <br>
-    <div id="badge" class="badge-success col-md-10 p-2 offset-1">
-        <h3>Easy Money! Win 5.000$ This Month</h3><br>
-        <h3>Even Better Win Online Free Course With One And Only Jamie Oliver!</h3>
-        <br>
-        <p>All you have to do is to take picture of your dish</p>
-    </div>
-    <br><br><br><br>
+    <main>
+        <div id="badge" class="badge-success col-md-10 p-2 offset-1">
+            <h3>Easy Money! Win 5.000$ This Month</h3><br>
+            <h3>Even Better Win Online Free Course With One And Only Jamie Oliver!</h3>
+            <br>
+            <p>All you have to do is to take picture of your dish</p>
+        </div>
+        <br><br><br><br>
 
-    <div class="container d-flex">
-        <div class="col-md-7 centered ">
-            <div class="d-flex justify-content-between col-md-10">
-                <h2>Share your skils!</h2>
-                <button class="mr-6 btn btn-secondary"> <a href="home.html">Go Back</a></button>
+        <div class="container d-flex">
+            <div class="col-md-7 centered ">
+                <div class="d-flex justify-content-between col-md-10">
+                    <h2>Share your skils!</h2>
+                    <button class="mr-6 btn btn-secondary"> <a href="home.html">Go Back</a></button>
+                </div>
+
+                <form class="col-md-10" onsubmit="postRecepie(event)">
+                    <div class="form-group mt-4">
+                        <label for="name"><strong>Your name:</strong></label>
+                        <input type="text" name="name" class="form-control" id="recepie-name"
+                            aria-describedby="nameHelp" placeholder="Enter Your Name">
+                    </div>
+                    <div class="form-group mt-4">
+                        <label for="recepie-name"> <strong>Recepie name:</strong></label>
+                        <input type="text" name="recepie" class="form-control" id="recepie-name"
+                            aria-describedby="recepie-nameHelp" placeholder="Enter Recepie Name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ingredients"> <strong>Ingredients</strong> </label>
+                        <textarea class="form-control" id="ingredients" name="ingredients" rows="4"
+                            aria-describedby="ingredientsHelp" placeholder="List of Ingredients"></textarea>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="preparation"> <strong>Preparation:</strong> </label>
+                        <textarea class="form-control" id="preparation" name="preparation" rows="4"
+                            aria-describedby="preparationHelp" placeholder="Enter Preparation"></textarea>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="image"> <strong>Set Recepie Picture</strong> </label>
+                        <input type="file" class="form-control-file" name="image"
+                            onchange="getImageUrl(30, 0.5, showSelectedImage)" id="image" />
+                        <img src="" id="selected-image" />
+
+                    </div>
+                    <p class="error"></p>
+                    <button type="submit" class="btn btn-success">Submit</button> <br>
             </div>
-
-            <form class="col-md-10" onsubmit="postRecepie(event)">
-                <div class="form-group mt-4">
-                    <label for="name"><strong>Your name:</strong></label>
-                    <input type="text" name="name" class="form-control" id="recepie-name" aria-describedby="nameHelp"
-                        placeholder="Enter Your Name">
-                </div>
-                <div class="form-group mt-4">
-                    <label for="recepie-name"> <strong>Recepie name:</strong></label>
-                    <input type="text" name="recepie" class="form-control" id="recepie-name"
-                        aria-describedby="recepie-nameHelp" placeholder="Enter Recepie Name">
-                </div>
-
-                <div class="form-group">
-                    <label for="ingredients"> <strong>Ingredients</strong> </label>
-                    <textarea class="form-control" id="ingredients" name="ingredients"  rows="4"
-                        aria-describedby="ingredientsHelp" placeholder="List of Ingredients"></textarea>
-
-                </div>
-                <div class="form-group">
-                    <label for="preparation"> <strong>Preparation:</strong> </label>
-                    <textarea class="form-control" id="preparation" name="preparation"  rows="4"
-                        aria-describedby="preparationHelp" placeholder="Enter Preparation"></textarea>
-
-                </div>
-                <div class="form-group">
-                    <label for="image"> <strong>Set Recepie Picture</strong> </label>
-                    <input type="file" class="form-control-file" name="image"
-                        onchange="getImageUrl(30, 0.5, showSelectedImage)" id="image" />
-                    <img src="" id="selected-image" />
-
-                </div>
-                <p class="error"></p>
-                <button type="submit" class="btn btn-success">Submit</button> <br>
+            <div>
+                <img class="w-100"
+                    src="https://cdn.i-scmp.com/sites/default/files/styles/768x768/public/d8/images/methode/2020/03/18/adf7ecd6-6838-11ea-9de8-4adc9756b5c3_image_hires_141354.JPG?itok=cwCwDAea&v=1584512045"
+                    alt="">
+            </div>
         </div>
-        <div>
-            <img class="w-100"
-                src="https://cdn.i-scmp.com/sites/default/files/styles/768x768/public/d8/images/methode/2020/03/18/adf7ecd6-6838-11ea-9de8-4adc9756b5c3_image_hires_141354.JPG?itok=cwCwDAea&v=1584512045"
-                alt="">
-        </div>
-    </div>
 
-    <div id="result"></div>
-    <br>
-    <hr>
-    <footer></footer> 
+        <div id="result"></div>
+    </main>
+    
+    <br><hr>
+    <footer></footer>
 
-   
+
     <script src="js/get-image-url.js"></script>
     <script src="js/recepies-form.js"></script>
     <script src="js/set-header-and-footer.js"></script>

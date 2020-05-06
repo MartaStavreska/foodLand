@@ -19,10 +19,11 @@ logoutAnchor.onclick = function () {
 
 var adminAnchor = document.querySelector("#admin");
 var li = document.querySelector("#admin-li");
+var ul = document.querySelector("#nav-ul")
 if(localStorage.getItem("email") == "marta@gmail.com"){
     adminAnchor.innerHTML = "Messages"
 }else{
-    document.querySelector("ul").removeChild(li);
+    ul.removeChild(li);
 }
 
 
