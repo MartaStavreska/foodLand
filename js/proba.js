@@ -20,9 +20,11 @@ function allRecepies() {
         };
         return newElement;
       });
+
+      drawRecepies(recepies);
       drawAllRecepies(recepies);
-      drawRecepies(recepies);  
       searchRecepie(recepies);
+
     }).catch(function (error) {
       console.log(error)
     });
@@ -30,10 +32,9 @@ function allRecepies() {
 
 
 function drawRecepies(array) {
-console.log(array);
   document.querySelector("#home-card").innerHTML = "";
   array.forEach(function (element) {
-    var rec = `
+    var recepie = `
        <div class="card p-3 m-2" style="width: 14rem;">
       <img class="card-img-top" style="height:250px" src="${element.image}"
         alt="Card image cap">
@@ -47,24 +48,24 @@ console.log(array);
     </div>
    
       `
-    document.querySelector("#home-card").innerHTML += rec;
+    document.querySelector("#home-card").innerHTML += recepie;
   });
 
 }
 
 function searchRecepie() {
-   
-    var input = document.querySelector("#search").value;
-    var formated = input.toLowerCase().trim();
 
-    var filtered = recepies.filter(function (element) {
-        return element.name.toLowerCase().indexOf(formated) > -1 ||
-            element.recepie.toLowerCase().indexOf(formated) > -1
+  var input = document.querySelector("#search").value;
+  var formated = input.toLowerCase().trim();
 
-    });
+  var filtered = recepies.filter(function (element) {
+    return element.name.toLowerCase().indexOf(formated) > -1 ||
+      element.recepie.toLowerCase().indexOf(formated) > -1
 
-    console.log(filtered)
-    drawAllRecepies(filtered);
+  });
+
+  console.log(filtered)
+  drawAllRecepies(filtered);
 }
 
 
@@ -72,11 +73,11 @@ function searchRecepie() {
 
 
 function drawAllRecepies(array) {
-  console.log(array)
-    document.querySelector("#all-recepies").innerHTML = "";
 
-    array.forEach(function (element) {
-        var rec = `
+  document.querySelector("#all-recepies").innerHTML = "";
+
+  array.forEach(function (element) {
+    var rec = `
         <div class="card mb-5">
         <div class="row no-gutters">
             <div class="col-md-3 pt-2 pl-3 mb-3">
@@ -106,8 +107,8 @@ function drawAllRecepies(array) {
     </div>`
 
 
-        document.querySelector("#all-recepies").innerHTML += rec;
-    });
+    document.querySelector("#all-recepies").innerHTML += rec;
+  });
 }
 
 

@@ -76,7 +76,7 @@ function allMessages() {
 function drawMessages(arrayOfMessages) {
     arrayOfMessages.forEach(function (element) {
         var card =
-    `<div class="card mt-3">
+    `<div class="card mt-3" style = "background-color:#f0f3bd">
       <div class="card-body"><h5>${element.name}</h5>
        <p>${element.email}</p>
         <p class="card-text">${element.message}</p>
