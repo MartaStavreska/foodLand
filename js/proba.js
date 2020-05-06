@@ -1,10 +1,10 @@
+///// Da gi spojam all-recepies.js i home.js so ist get da gi zemam
+
 var recepies;
 allRecepies();
 
 function allRecepies() {
-
   var url = "https://food-blog-8ca4b.firebaseio.com/recepies.json";
-
   fetch(url)
     .then(function (res) {
       return res.json();
@@ -20,9 +20,11 @@ function allRecepies() {
         };
         return newElement;
       });
-
+     ///// koja so mi e prva funkcija kaj nea ojt datata a vo vtorata ne
       drawRecepies(recepies);
+      console.log(recepies);
       drawAllRecepies(recepies);
+      console.log(recepies);
       searchRecepie(recepies);
 
     }).catch(function (error) {
